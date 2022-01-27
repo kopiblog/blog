@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Projectile Motion : An Analysis | Ishaan’s blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Projectile Motion : An Analysis" />
+<meta name="author" content="Ishaan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Study of projectile motion with graphical plots for a deeper understanding" />
+<meta property="og:description" content="Study of projectile motion with graphical plots for a deeper understanding" />
+<link rel="canonical" href="https://kopiblog.github.io/blog/physics/projectile/kinematics/2022/01/27/projectile.html" />
+<meta property="og:url" content="https://kopiblog.github.io/blog/physics/projectile/kinematics/2022/01/27/projectile.html" />
+<meta property="og:site_name" content="Ishaan’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-27T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Projectile Motion : An Analysis" />
+<script type="application/ld+json">
+{"url":"https://kopiblog.github.io/blog/physics/projectile/kinematics/2022/01/27/projectile.html","@type":"BlogPosting","headline":"Projectile Motion : An Analysis","dateModified":"2022-01-27T00:00:00-06:00","datePublished":"2022-01-27T00:00:00-06:00","author":{"@type":"Person","name":"Ishaan"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://kopiblog.github.io/blog/physics/projectile/kinematics/2022/01/27/projectile.html"},"description":"Study of projectile motion with graphical plots for a deeper understanding","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kopiblog.github.io/blog/feed.xml" title="Ishaan's blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Ishaan&#39;s blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Projectile Motion : An Analysis</h1><p class="page-description">Study of projectile motion with graphical plots for a deeper understanding</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-27T00:00:00-06:00" itemprop="datePublished">
+        Jan 27, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Ishaan</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#physics">physics</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#projectile">projectile</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#kinematics">kinematics</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/kopiblog/blog/blob/master/_notebooks/2022-01-27-projectile.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Aim">Aim </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#1.-Maximum-Height">1. Maximum Height </a></li>
+<li class="toc-entry toc-h2"><a href="#2.-Time-of-Flight">2. Time of Flight </a></li>
+<li class="toc-entry toc-h2"><a href="#3.-Range">3. Range </a></li>
+<li class="toc-entry toc-h2"><a href="#4.-Visual-Plots">4. Visual Plots </a></li>
+<li class="toc-entry toc-h2"><a href="#5.-Animation-of-Trajectory">5. Animation of Trajectory </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-27-projectile.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Aim">
+<a class="anchor" href="#Aim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aim<a class="anchor-link" href="#Aim"> </a>
+</h1>
+<p>A projectile is launched with velocity $v_0$ at an angle θ to the horizontal. We want to investigate and analyze its trajectory and study the effect of changing the launch angle θ. We illustrate it visually for a clearer understanding.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Maximum-Height">
+<a class="anchor" href="#1.-Maximum-Height" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Maximum Height<a class="anchor-link" href="#1.-Maximum-Height"> </a>
+</h2>
+<p>For finding maximum height $h$ reached by the projectile, we consider motion in vertical direction i.e. along y-axis.</p>
+<p><em>initial velocity</em> = $v_0sinθ$<br>
+<em>final velocity</em> = $0$<br>
+<em>acceleration</em> = $-g$</p>
+<p>Using<br>
+$
+\begin{align}
+v^2 - u^2 = 2as
+\end{align}
+$<br>
+we get<br>
+$
+\begin{align}
+0^2 - v_0^2sin^2θ = 2(-g)h
+\end{align}
+$<br>
+$
+\begin{align}
+v_0^2sin^2θ = 2gh
+\end{align}
+$</p>
+<p>i.e.</p>
+<p>$
+\begin{align}
+\Large h = \frac{v_0^2sin^2θ}{2g}
+\end{align}
+$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Time-of-Flight">
+<a class="anchor" href="#2.-Time-of-Flight" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Time of Flight<a class="anchor-link" href="#2.-Time-of-Flight"> </a>
+</h2>
+<p>For finding maximum height $h$, we again consider motion in vertical direction.</p>
+<p><em>initial velocity</em> = $v_0sinθ$<br>
+<em>displacement</em> = $0$<br>
+<em>acceleration</em> = $-g$</p>
+<p>Using 
+$
+\begin{align}
+s = ut + \frac{1}{2} at^2
+\end{align}
+$<br>
+we get<br>
+$
+\begin{align}
+0 = v_0tsinθ - \frac{1}{2}gt^2
+\end{align}
+$<br>
+$
+\begin{align}
+0 = t(v_0sinθ - \frac{1}{2}gt)
+\end{align}
+$</p>
+<p>This gives<br>
+$
+\begin{align}
+t = 0
+\end{align}
+$<br>
+or<br>
+$
+\begin{align}
+v_0sinθ - \frac{1}{2}gt = 0
+\end{align}
+$</p>
+<p>Thus, the time of flight is as below :-</p>
+<p>$
+\begin{align}
+\Large t = \frac{2v_0sinθ}{g}
+\end{align}
+$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Range">
+<a class="anchor" href="#3.-Range" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Range<a class="anchor-link" href="#3.-Range"> </a>
+</h2>
+<p>For finding the range  $s$ or the distance where the projectile lands on the ground, we consider motion in horizontal direction i.e. along x-axis.</p>
+<p><em>Initial Velocity</em> = $v_0cosθ$</p>
+<p><em>Time of Flight</em> = $\frac{2v_0sinθ}{g}$  (from section 2)</p>
+<p>$
+\begin{align}
+s = ut
+\end{align}
+$</p>
+<p>$  
+\begin{align}
+= \frac{(v_0cosθ)(2v_0sinθ)}{g}
+\end{align}
+$</p>
+<p>$
+\begin{align}
+= \frac{2v_0^2sinθcosθ}{g}
+\end{align}
+$</p>
+<p>$
+\begin{align}
+= \frac{v_0^2sin2θ}{g}
+\end{align}
+$</p>
+<p>i.e.</p>
+<p>$\Large s = \frac{v_0^2sin2θ}{g}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Visual-Plots">
+<a class="anchor" href="#4.-Visual-Plots" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Visual Plots<a class="anchor-link" href="#4.-Visual-Plots"> </a>
+</h2>
+<p>Using the equations derived in sections 1, 2 and 3, we can compute the trajectory of the projectile and plot it.</p>
+<p>Using time as the independent variable, we generate $x$ and $y$ and plot $y$ versus $x$ for a range of values of $\theta$ from $10^{\circ}$ to $90^{\circ}$. We use $g = 9.8 m/s^2$ and $v_0 = 100 m/s$</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.legend.Legend at 0x263d6068248&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Animation-of-Trajectory">
+<a class="anchor" href="#5.-Animation-of-Trajectory" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Animation of Trajectory<a class="anchor-link" href="#5.-Animation-of-Trajectory"> </a>
+</h2>
+<p>Finally, we animate the trajectory of the projectile for a certain value of $\theta = 45^{\circ}$. It is easy to change ${\theta}$ and run the animation for various other values of ${\theta}$</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># contain (x, y) </span>
+<span class="k">def</span> <span class="nf">init</span><span class="p">():</span>  
+    <span class="n">line</span><span class="o">.</span><span class="n">set_data</span><span class="p">([],</span> <span class="p">[])</span> 
+    <span class="k">return</span> <span class="n">line</span><span class="p">,</span> 
+
+<span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">])</span> 
+      
+    <span class="k">return</span> <span class="n">line</span><span class="p">,</span> 
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<video width="720" height="720" controls="" autoplay="">
+  <source type="video/mp4" src="data:video/mp4;base64,AAAAIGZ0eXBNNFYgAAACAE00ViBpc29taXNvMmF2YzEAAAAIZnJlZQAAMqFtZGF0AAACoAYF//+c%0A3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE2MSAtIEguMjY0L01QRUctNCBBVkMgY29kZWMg%0ALSBDb3B5bGVmdCAyMDAzLTIwMjAgLSBodHRwOi8vd3d3LnZpZGVvbGFuLm9yZy94MjY0Lmh0bWwg%0ALSBvcHRpb25zOiBjYWJhYz0xIHJlZj0zIGRlYmxvY2s9MTowOjAgYW5hbHlzZT0weDM6MHgxMTMg%0AbWU9aGV4IHN1Ym1lPTcgcHN5PTEgcHN5X3JkPTEuMDA6MC4wMCBtaXhlZF9yZWY9MSBtZV9yYW5n%0AZT0xNiBjaHJvbWFfbWU9MSB0cmVsbGlzPTEgOHg4ZGN0PTEgY3FtPTAgZGVhZHpvbmU9MjEsMTEg%0AZmFzdF9wc2tpcD0xIGNocm9tYV9xcF9vZmZzZXQ9LTIgdGhyZWFkcz0xMiBsb29rYWhlYWRfdGhy%0AZWFkcz0yIHNsaWNlZF90aHJlYWRzPTAgbnI9MCBkZWNpbWF0ZT0xIGludGVybGFjZWQ9MCBibHVy%0AYXlfY29tcGF0PTAgY29uc3RyYWluZWRfaW50cmE9MCBiZnJhbWVzPTMgYl9weXJhbWlkPTIgYl9h%0AZGFwdD0xIGJfYmlhcz0wIGRpcmVjdD0xIHdlaWdodGI9MSBvcGVuX2dvcD0wIHdlaWdodHA9MiBr%0AZXlpbnQ9MjUwIGtleWludF9taW49NiBzY2VuZWN1dD00MCBpbnRyYV9yZWZyZXNoPTAgcmNfbG9v%0Aa2FoZWFkPTQwIHJjPWNyZiBtYnRyZWU9MSBjcmY9MjMuMCBxY29tcD0wLjYwIHFwbWluPTAgcXBt%0AYXg9NjkgcXBzdGVwPTQgaXBfcmF0aW89MS40MCBhcT0xOjEuMDAAgAAADFNliIQAEf/+94gfMstp%0A+TrXchHnrS6tH1DuRnFepL3+IAAAAwAAAwAAAwM0sgpF9Uc784PAAAADAzwAg4E3BRct+xtp5u/M%0AAvDkup68jnW5zGVKM8pUuwqUCak3DUvbcMbiHGjLGjL/tBuvbkBUwNk0nkotCWp4H3JD9fuc0fmj%0AQo68mFq32oWzPN0YDJLgiNKelSF2BBa9s1bnmhGmX5vyg6JW1wV+oUMqTtc773cD+ec3veQY2Nhm%0A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%0AAAAdZGF0YQAAAAEAAAAATGF2ZjU4LjQ1LjEwMA==%0A"></source>
+  Your browser does not support the video tag.
+</video>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="kopiblog/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/physics/projectile/kinematics/2022/01/27/projectile.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Math, Science and Technology</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/kopiblog" target="_blank" title="kopiblog"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
